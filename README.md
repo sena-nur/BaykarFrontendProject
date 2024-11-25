@@ -59,12 +59,6 @@ Key Features:
 3. Run development server: `npm run dev`
 4. Build for production: `npm run build`
 
-### Sneaker Landing Page
-
-1. Navigate to `arayuz_calismasi` directory
-2. Install dependencies: `npm install`
-3. Run TailwindCSS build: `npm run build`
-
 ## Technologies Used
 
 ### Quiz App
