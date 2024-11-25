@@ -1,0 +1,44 @@
+{
+  "testimonials": [
+    {
+      "icon": "kontastr.svg",
+      "header": "Kontastr",
+      "text": "Amet morbi enim sodales quis dui, in habitant pharetra. Risus id fringilla sed adipiscing volutpat sit varius turpis. Sed pretium se.",
+      "full_name": "Ralph Edwards",
+      "position": "Product Designer",
+      "profile": "ralph.png"
+    },
+    {
+      "icon": "zoomerr.svg",
+      "header": "Zoomerr",
+      "text": "Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.",
+      "full_name": "Hellen Jummy",
+      "position": "Team Lead",
+      "profile": "hellen.png"
+    },
+    {
+      "icon": "shells.svg",
+      "header": "SHELLS",
+      "text": "Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet enim. Sit purus venenatis velit semper lectus sed ornare quam nulla.",
+      "full_name": "Hellena John",
+      "position": "Co-founder",
+      "profile": "hellena.png"
+    },
+    {
+      "icon": "artvenue.svg",
+      "header": "ArtVenue",
+      "text": "A eget sed posuere dui risus habitasse mauris. Venenatis aliquet id ultrices a lacus. Pretium vehicula pretium posuere justo sed.",
+      "full_name": "David Oshodi",
+      "position": "Manager",
+      "profile": "david.png"
+    },
+    {
+      "icon": "waves.svg",
+      "header": "Waves",
+      "text": "Magna egestas aliquet ut integer non. Sed diam enim nibh sit. Aliquam laoreet aenean metus nibh eu scelerisque.",
+      "full_name": "Charlotte Hanlin",
+      "position": "Ceo",
+      "profile": "charlotte.png"
+    }
+  ]
+}

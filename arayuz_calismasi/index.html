@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baykar Project</title>
+    <!-- Tailwind CSS -->
+    <!-- <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "custom-text": "#78350f",
+              "custom-bg": "#fffbeb",
+              "blue-gray-200": "#e2e8f0",
+              "blue-gray-900": "#0f172a",
+              white: "#ffffff",
+            },
+          },
+        },
+      };
+    </script> -->
+
+    <link href="./src/output.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="bg-white sm:bg-gradient-to-b sm:from-[#FFFBEB] sm:to-[#FFFFFF] relative"
+      style="z-index: -2"
+    >
+      <nav
+        class="px-4 max-w-[1440px] mx-auto px-2 sm:px-4 md:px-8 lg:px-16 xl:px-20 py-6"
+      >
+        <div class="relative flex items-center justify-between">
+          <!-- Logo -->
+          <p class="text-[#78350F] text-[32px] font-bold">Collers</p>
+
+          <!-- Hamburger Menu Button for Mobile -->
+          <label class="sm:hidden cursor-pointer" id="hamburger-button">
+            <input type="checkbox" class="peer hidden" />
+            <img
+              src="public/icons/hamburger-icon.png"
+              alt="menu"
+              class="w-6 h-6"
+            />
+
+            <!-- Mobile Menu -->
+            <div
+              id="mobile-menu"
+              class="hidden peer-checked:block absolute top-full left-0 right-0 bg-[#F3F7F4] mt-2 p-4 sm:hidden"
+            >
+              <div class="flex flex-col space-y-4">
+                <button
+                  class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+                >
+                  Products
+                </button>
+                <button
+                  class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+                >
+                  Solutions
+                </button>
+                <button
+                  class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+                >
+                  Pricing
+                </button>
+                <button
+                  class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+                >
+                  Resources
+                </button>
+                <button
+                  class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+                >
+                  Log In
+                </button>
+                <button
+                  class="text-[#78350F] border-2 border-[#163A24] rounded-lg px-4 py-2 hover:bg-[#163A24] hover:text-white transition-colors"
+                >
+                  Sign up now
+                </button>
+              </div>
+            </div>
+          </label>
+
+          <!-- Desktop Menu -->
+          <div class="hidden sm:flex items-center space-x-2 md:space-x-4">
+            <button
+              class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+            >
+              Products
+            </button>
+            <button
+              class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+            >
+              Solutions
+            </button>
+            <button
+              class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+            >
+              Pricing
+            </button>
+            <button
+              class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+            >
+              Resources
+            </button>
+            <button
+              class="text-[#78350F] font-medium text-[16px] hover:text-opacity-80"
+            >
+              Log In
+            </button>
+            <button
+              class="text-[#78350F] font-medium border-2 border-[#78350f] rounded-lg px-2 py-2 bg-custom-bg hover:bg-[#78350f] hover:text-white transition-colors md:px-4"
+            >
+              Sign up now
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="relative">
+        <section
+          class="bg-white sm:bg-transparent max-w-[1440px] mx-auto py-4 sm:py-8 md:py-12 lg:py-16 xl-py-20 px-4 sm:px-8 md-px-12 lg:px-16 xl:px-20 relative flex lg:flex-row flex-col items-center justify-between gap-8 md:gap-20 bg-custom-bg"
+        >
+          <!-- Left Column -->
+
+          <div class="flex flex-col gap-12 max-w-[714px]">
+            <h1 class="text-4xl md:text-[72px] font-bold text-blue-gray-900">
+              Collectible Sneakers
+            </h1>
+            <p class="text-gray-600 text-lg">
+              Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
+              suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum
+              ultrices amet.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="px-6 py-3 text-[#78350F] font-medium border-2 border-[#78350F] rounded-lg hover:bg-custom-text hover:text-white transition-colors"
+              >
+                Sign up now
+              </button>
+              <button
+                class="px-6 py-3 text-custom-text flex items-center gap-2 hover:opacity-80"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="#78350F"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M9.5 8.96533C9.5 8.48805 9.5 8.24941 9.59974 8.11618C9.68666 8.00007 9.81971 7.92744 9.96438 7.9171C10.1304 7.90525 10.3311 8.03429 10.7326 8.29239L15.4532 11.3271C15.8016 11.551 15.9758 11.663 16.0359 11.8054C16.0885 11.9298 16.0885 12.0702 16.0359 12.1946C15.9758 12.337 15.8016 12.449 15.4532 12.6729L10.7326 15.7076C10.3311 15.9657 10.1304 16.0948 9.96438 16.0829C9.81971 16.0726 9.68666 15.9999 9.59974 15.8838C9.5 15.7506 9.5 15.512 9.5 15.0347V8.96533Z"
+                    stroke="#78350F"
+                    stroke-width="2"
+                  />
+                </svg>
+                Watch Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div
+            class="z-10 relative w-[486px] flex justify-center flex-shrink-0 mt-[131px]"
+          >
+            <div
+              class="w-[296px] h-[300px] sm:w-[367px] sm:h-[372px] bg-[#FDB022] rounded-[50px]"
+            >
+              <!-- ORANGE COLOR BOX -->
+            </div>
+            <img
+              src="public/images/shoe.png"
+              alt="Collectible Sneaker"
+              class="absolute -top-[51px] -rotate-25 w-[395px] h-[313px] sm:w-[486px] sm:h-[388px]"
+            />
+          </div>
+        </section>
+      </div>
+
+      <div class="relative">
+        <div
+          class="absolute ml-3 transform -top-[500px] inset-0 z-0 right-0 bg-[#FEF3C7] h-[806px]"
+          style="clip-path: polygon(100% 100%, 0 100%, 100% 0)"
+        ></div>
+
+        <section
+          class="max-w-[1440px] bg-transparent mx-auto flex mt-0 md:mt-200 items-center justify-center py-4 sm:py-8 md:py-12 lg:py-16 xl-py-20 px-4 sm:px-8 md-px-12 lg:px-16 xl:px-20 gap-4 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 order-3"
+        >
+          <div
+            class="flex z-10 flex-col md:flex-row gap-20 px-12 sm:px-16 md:px-4 lg:px-0"
+          >
+            <div class="flex flex-col gap-2.5">
+              <div class="w-full gap-4">
+                <div class="relative w-[60px] h-[60px]">
+                  <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute top-0 left-0"
+                  >
+                    <path
+                      d="M17.9875 10.6665H46.1685C46.1685 10.6665 43.8202 46.0188 32.0781 46.0188C26.342 46.0188 22.8476 37.5825 20.7736 28.9521C18.6019 19.9157 17.9875 10.6665 17.9875 10.6665Z"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M46.1685 10.6664C46.1685 10.6664 48.6251 8.04598 50.6667 7.99974C54.6667 7.90918 55.4061 10.6664 55.4061 10.6664C56.1891 12.2918 56.8152 16.5179 53.0579 20.4188C49.3003 24.3198 45.0941 27.7331 43.3824 28.952"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.9874 10.6669C17.9874 10.6669 15.4279 8.01662 13.3332 8.00027C9.33321 7.96904 8.59371 10.6669 8.59371 10.6669C7.81089 12.2923 7.18465 16.5183 10.9421 20.4193C14.6996 24.3203 19.062 27.7336 20.7734 28.9528"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22.6843 53.3334C22.6843 48.4572 32.0779 46.019 32.0779 46.019C32.0779 46.019 41.4717 48.4572 41.4717 53.3334H22.6843Z"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div
+                    class="absolute transform translate-x-1/2 -translate-y-1/4 top-0 left-2 w-[44px] h-[44px] bg-[#0369A1] opacity-50 rounded-[10px] rotate-[-45deg] z-2"
+                  ></div>
+                </div>
+
+                <p class="font-medium z-[1] text-xl text-[#0F172A] gap-3">
+                  Nibh vierra
+                </p>
+                <p class="font-normal text-lg text-[#0F172A] leading-[1.8rem]">
+                  Sit bibendum donec dolor fames neque vulputate non sit
+                  aliquam. Consequat turpis natoque leo, massa.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2.5">
+              <div class="w-full gap-4">
+                <div class="relative">
+                  <svg
+                    width="65"
+                    height="64"
+                    viewBox="0 0 65 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M53.6667 53.3332L11 39.9998M53.6667 53.3332H11V39.9998L53.6667 53.3332ZM53.6667 53.3332V31.9998C53.6667 20.2178 44.1155 10.6665 32.3333 10.6665C30.2152 10.6665 28.1693 10.9752 26.2381 11.5499C17.4259 14.1726 11 22.3358 11 31.9998V39.9998L53.6667 53.3332Z"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M43 24V26.6667"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M32.3333 21.3335V24.0002"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M21.6667 18.6665V21.3332"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+
+                  <div
+                    class="absolute transform translate-x-1/2 -translate-y-1/4 left-0 top-0 w-[53px] h-[53px] bg-[#15803D] opacity-50 rounded-[10px] transform rotate-90"
+                  ></div>
+                </div>
+
+                <p class="font-medium z-[10] text-xl text-[#0F172A] gap-3">
+                  Nibh vierra
+                </p>
+                <p
+                  class="font-normal text-lg z-[10] text-[#0F172A] leading-[1.8rem]"
+                >
+                  Sit bibendum donec dolor fames neque vulputate non sit
+                  aliquam. Consequat turpis natoque leo, massa.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-full gap-4">
+                <div class="relative gap-2.5">
+                  <svg
+                    width="65"
+                    height="64"
+                    viewBox="0 0 65 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.00002 53.3332V23.9998C6.00002 21.0543 8.38783 18.6665 11.3334 18.6665H54C56.9456 18.6665 59.3334 21.0543 59.3334 23.9998V53.3332C59.3334 56.2788 56.9456 58.6665 54 58.6665H11.3334C8.38783 58.6665 6.00002 56.2788 6.00002 53.3332Z"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M23.3334 6.6665L32.6667 15.9998L42 6.6665"
+                      stroke="#78350F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <div
+                    class="absolute transform translate-x-1/2 -translate-y-1/4 top-3 left-4 w-[45px] h-[45px] bg-[#A21CAF] opacity-50 rounded-[20px]"
+                  ></div>
+                </div>
+
+                <p class="font-medium text-xl text-[#0F172A] gap-3">
+                  Nibh vierra
+                </p>
+                <p class="font-normal text-lg text-[#0F172A] leading-[1.8rem]">
+                  Sit bibendum donec dolor fames neque vulputate non sit
+                  aliquam. Consequat turpis natoque leo, massa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- THE BEST OF THE BEST -->
+      <section class="overflow-hidden flex-col border-[#E2E8F0] bg-[#0F172A]">
+        <div
+          class="relative z-10 max-w-[1440px] mx-auto p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 gap-4 sm:gap-6 md:gap-8 lg-gap-16 xl:gap-20"
+        >
+          <div
+            class="flex flex-row items-center justify-between mb-20 w-full gap-4 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20"
+          >
+            <p
+              class="text-[36px] sm:text-[56px] text-white gap-8 mb-[5px] leading-[61.6px]"
+              style="font-weight: 800"
+            >
+              The best of the best
+            </p>
+            <button
+              class="lg:px-6 md:px-4 sm:px-3 px-2 py-5 border-2 border-white rounded-[8px]"
+            >
+              <p
+                class="text-white font-bold size text-lg sm:text-xl md:text-2xl lg:px-6 md:px-4 sm:px-3 px-2"
+              >
+                Sign up now
+              </p>
+            </button>
+          </div>
+          <div
+            class="flex m-4 mt-0 sm:mt-4 flex-col md:flex-row justify-between gap-4 sm:gap-6 md:gap-8 xl:gap-12"
+          >
+            <div
+              class="radius-[200px] relative flex flex-col items-center h-auto bg-[#0F172A] border border-[#0F172A] rounded-lg overflow-visible"
+              style="
+                box-shadow: 0px 0px 15px 0px #ffffff12,
+                  0px 25px 50px -12px #ffffff40;
+              "
+            >
+              <div
+                class="absolute w-[271px] h-[271px] top-[176px] left-[-35px] gap-0 rounded-[50px] opacity-75 bg-[#BE185D] z-0"
+              ></div>
+              <!-- Resim -->
+              <img
+                src="public/images/shoe1.png"
+                alt="Product Image"
+                class="w-full h-auto gap-2.5 z-10"
+              />
+
+              <!-- İçerik -->
+
+              <div
+                class="flex flex-col gap-4 px-8 pt-8 w-full h-auto z-10 bg-[#0F172A]"
+              >
+                <h2 class="text-white font-bold text-xl gap-1">Title</h2>
+                <p class="text-white text-base">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+              </div>
+              <!-- Buton -->
+              <div class="w-full gap-4 p-8 pb-8 bg-[#0F172A] z-10">
+                <button
+                  class="flex flex-row items-center justify-center w-full p-4 h-auto border-2 border-white rounded text-white hover:bg-white hover:text-[#0F172A] transition"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h11.1a1 1 0 001-.8l1.3-5.2M7 13H3m0 0L5 5m0 0h14l-1.4 5.6a1 1 0 01-1 .8H7z"
+                    ></path>
+                  </svg>
+                  <p class="font-medium px-4 h-auto w-auto">Buy Now</p>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col items-center bg-[#0F172A] border border-[#0F172A] rounded-lg overflow-visible z-10"
+              style="
+                box-shadow: 0px 0px 15px 0px #ffffff12,
+                  0px 25px 50px -12px #ffffff40;
+              "
+            >
+              <div
+                class="absolute w-[161px] h-[161px] top-[-31px] -left-[42px] gap-0 rounded-[50px] opacity-75 bg-[#0369A1] z-0"
+              ></div>
+
+              <div
+                class="absolute w-[130px] h-[130px] top-[294px] left-[291px] gap-0 rounded-[30px] opacity-[0.75] bg-[#B45309] z-0"
+              ></div>
+              <!-- Resim -->
+              <img
+                src="public/images/shoe2.png"
+                alt="Product Image"
+                class="w-full h-auto gap-2.5 z-10"
+              />
+
+              <!-- İçerik -->
+              <div
+                class="flex flex-col gap-4 px-8 pt-8 w-full z-10 bg-[#0F172A]"
+              >
+                <h2 class="text-white font-bold text-xl gap-1">Title</h2>
+                <p class="text-white text-base">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+
+                <!-- Buton -->
+                <div class="w-full gap-4 p-4 pb-8">
+                  <button
+                    class="flex items-center justify-center w-full p-4 border-2 border-white text-white font-medium rounded hover:bg-white hover:text-[#0F172A] transition"
+                  >
+                    <svg
+                      class="w-5 h-5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h11.1a1 1 0 001-.8l1.3-5.2M7 13H3m0 0L5 5m0 0h14l-1.4 5.6a1 1 0 01-1 .8H7z"
+                      ></path>
+                    </svg>
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col items-center bg-[#0F172A] border border-[#0F172A] rounded-lg overflow-visible z-10"
+              style="
+                box-shadow: 0px 0px 15px 0px #ffffff12,
+                  0px 25px 50px -12px #ffffff40;
+              "
+            >
+              <div
+                class="absolute w-[202px] h-[202px] top-[294px] left-[82px] gap-0 rounded-[30px] opacity-[0.75] bg-[#A21CAF] z-0"
+              ></div>
+
+              <div
+                class="absolute w-[232px] h-[232px] top-[33px] left-[211px] gap-0 rounded-[50px] opacity-[0.75] bg-[#15803D] z-0"
+              ></div>
+              <!-- Resim -->
+              <img
+                src="public/images/shoe3.png"
+                alt="Product Image"
+                class="w-full h-auto gap-2.5 z-10"
+              />
+
+              <!-- İçerik -->
+              <div
+                class="flex flex-col gap-4 px-8 pt-8 w-full z-10 bg-[#0F172A]"
+              >
+                <h2 class="text-white font-bold text-xl gap-1">Title</h2>
+                <p class="text-white text-base">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+
+                <!-- Buton -->
+                <div class="w-full gap-4 p-4 pb-8">
+                  <button
+                    class="flex items-center justify-center w-full p-4 border-2 border-white text-white font-medium rounded hover:bg-white hover:text-[#0F172A] transition"
+                  >
+                    <svg
+                      class="w-5 h-5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h11.1a1 1 0 001-.8l1.3-5.2M7 13H3m0 0L5 5m0 0h14l-1.4 5.6a1 1 0 01-1 .8H7z"
+                      ></path>
+                    </svg>
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--columnlar-->
+      </section>
+
+      <section
+        class="max-w-[1440px] mx-auto relative w-full py-20 px-6 md:py-40 md:px-20 overflow-hidden"
+      >
+        <!-- Main Content Container -->
+        <div
+          style="box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1)"
+          class="flex flex-col bg-white lg:flex-row items-center justify-between py-4 sm:py-8 md:py-12 lg:py-16 xl-py-20 px-4 sm:px-8 md-px-12 lg:px-16 xl:px-20 gap-4 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 rounded-[30px]"
+        >
+          <!-- Left Content -->
+          <div class="flex flex-col gap-8 w-full lg:w-1/2">
+            <h2 class="text-4xl md:text-5xl font-bold text-[#0F172A]">
+              Why join us
+            </h2>
+
+            <!-- Features List -->
+            <div class="flex flex-col gap-4">
+              <div class="flex items-start gap-3">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 6L9 17L4 12"
+                    stroke="#78350F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="text-lg text-gray-600">
+                  Est et in pharetra magna adipiscing ornare aliquam.
+                </p>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 6L9 17L4 12"
+                    stroke="#78350F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="text-lg text-gray-600">
+                  Tellus arcu sed consequat ac velit ut eu blandit.
+                </p>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 6L9 17L4 12"
+                    stroke="#78350F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="text-lg text-gray-600">
+                  Ullamcorper ornare in et egestas dolor orci.
+                </p>
+              </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="mt-4">
+              <button
+                class="px-6 py-3 text-[#78350F] border-2 border-[#78350F] rounded-lg hover:bg-[#78350F] hover:text-white transition-colors"
+              >
+                Sign up now
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Content - Video Player -->
+          <div class="relative w-full overflow-visible lg:w-1/2">
+            <!-- Decorative Shapes -->
+            <div
+              class="absolute md:h-[720px] z-0 w-[210px] h-[940px] bg-[#FDE68A] opacity-100 right-[150px] -top-48 rotate-45"
+            ></div>
+            <div
+              class="absolute z-0 w-[200px] h-[200px] bg-[#BE185D] opacity-75 -bottom-32 -right-28 rounded-[50px]"
+            ></div>
+            <div
+              class="absolute z-10 w-[85px] h-[85px] bg-[#15803D] opacity-75 -bottom-10 left-20 rounded-full"
+            ></div>
+            <div
+              class="absolute z-10 w-[60px] h-[60px] bg-[#0369A1] opacity-75 -top-20 -right-14 rounded-full"
+            ></div>
+            <div
+              class="absolute z-0 w-[90px] h-[90px] bg-[#B45309] top-4 -left-6 rounded-[28px]"
+            ></div>
+
+            <!-- Video Container -->
+            <div
+              class="rounded-[10px] relative rounded-2xl overflow-hidden"
+              style="box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2)"
+            >
+              <!-- Browser-like top bar -->
+              <div class="bg-white px-4 py-2 flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+
+              <!-- Video Thumbnail with Play Button -->
+              <div class="relative aspect-video">
+                <img
+                  src="public/images/video.svg"
+                  alt="Running shoes video thumbnail"
+                  class="rounded-b-[10px] border border-white border-[5px] w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div>
+                    <div
+                      class="w-0 h-0 border-t-8 border-b-8 border-l-12 border-transparent border-l-white ml-1"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-40">
+        <div
+          class="flex flex-col justify-center items-start py-4 sm:py-8 md:py-12 lg:py-16 xl-py-20 px-4 sm:px-8 md-px-12 lg:px-16 xl:px-20 w-full max-w-[1440px] mx-auto relative"
+        >
+          <div
+            class="bg-[#FDE68A] h-[421px] w-[100%] left-0 top-48 absolute z-0"
+          ></div>
+          <div class="z-10 flex w-full justify-between items-center">
+            <h2 class="text-[36px] md:text-[56px] font-[800] text-[#0F172A]">
+              Because they love us
+            </h2>
+            <div class="flex gap-4">
+              <button
+                id="prev-btn"
+                class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-white border border-[#163A24] flex items-center justify-center z-10"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M15 19l-7-7 7-7"
+                    stroke="#163A24"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <button
+                id="next-btn"
+                class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-white border border-[#163A24] flex items-center justify-center z-10"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 5l7 7-7 7"
+                    stroke="#163A24"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="relative w-[100%] overflow-hidden">
+          <div
+            id="testimonial-container"
+            class="flex flex-row justify-center items-center gap-6"
+            style="
+              transition: transform 0.3s ease-in-out;
+              height: 430px;
+              margin: 0 auto;
+            "
+          >
+            <!-- Testimonials will be inserted here via JavaScript -->
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/src/menu.js"></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>
