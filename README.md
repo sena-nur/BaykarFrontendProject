@@ -4,7 +4,7 @@ This repository contains two frontend projects developed as part of the Baykar t
 
 ## Live Demos
 
-- Quiz App: [Live Demo](https://tiny-axolotl-d6ec85.netlify.app/)
+- Quiz App: [Live Demo](https://loquacious-dieffenbachia-494091.netlify.app/)
 - Sneaker Landing Page: [Live Demo](https://chipper-pudding-2b7adc.netlify.app/)
 
 ## Projects
